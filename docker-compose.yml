@@ -1,0 +1,9 @@
+services:
+  stations-api:
+    build: .
+    container_name: stations-api
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URI: ${MONGO_URI}
+      JWT_SECRET: ${JWT_SECRET}
