@@ -10,7 +10,7 @@ const connectDB = require('./config/database')
 const authRoutes = require('./routes/auth')
 const stationRoutes = require('./routes/station')
 const measurementRoutes = require('./routes/measurement')
-
+const statusRouter = require('./routes/status')
 // Import Swagger docs
 const swaggerSpec = require('./swagger/swagger')
 
@@ -29,6 +29,9 @@ app.use('/measurements', measurementRoutes)
 
 // Swagger documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+
+// Status route
+app.use('/status', statusRouter)
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

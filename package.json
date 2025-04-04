@@ -1,4 +1,11 @@
 {
+  "name": "devops-up",
+  "version": "1.0.0",
+  "description": "DevOps UP API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
